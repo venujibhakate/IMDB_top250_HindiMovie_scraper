@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 import pprint
 import json
-# import os
 import pathlib
 import random
 import time
@@ -277,16 +276,6 @@ for i in all_movie_details:
 # pprint.pprint(analyse_movies_gener(gener_list))
 
 
-# Task14*******************************************************************************
-
-# def analyse_co_actors(moviesall_list):
-#     coactors_dic = {}
-#     coactors_list = []
-#     for i in range(10):
-#         for j in moviesall_list:
-#             print j
-# analyse_co_actors(all_movie_details)
-
 # Task15************************************************************************************
 def analyse_actors(moviesall_list):
     total_movie_actors_list = {}
@@ -298,9 +287,7 @@ def analyse_actors(moviesall_list):
             actors_imdb_id = i["imdb_id"]
             # print actors_imdb_id
             actors_imdb_name = i["name"]
-            # print actors_imdb_name
-            # total_movie_actors_list =(actors_imdb_id,actors_imdb_name)
-            # print total_movie_actors_list
+            
             if actors_imdb_id in total_movie_actors_list:
                 dic["num_movie"] += 1
             else:
